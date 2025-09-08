@@ -1,0 +1,8 @@
+day_name,day_of_week,is_weekend,avg_daily_volume,avg_daily_transactions,avg_daily_customers
+Friday,5,False,89179.02,784.66,590.82
+Monday,1,False,72053.41,640.57,480.13
+Saturday,6,True,46194.09,411.94,311.38
+Sunday,7,True,23104.51,208.86,153.3
+Thursday,4,False,76465.32,698.19,523.15
+Tuesday,2,False,74522.24,671.73,507.33
+Wednesday,3,False,75227.26,679.79,506.73
