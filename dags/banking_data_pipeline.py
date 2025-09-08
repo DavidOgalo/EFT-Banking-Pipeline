@@ -1,5 +1,5 @@
 """
-Banking Data Pipeline DAG for EFT Corporation
+Main Airflow DAG for EFT Banking Pipeline
 Ingests daily transactional data, transforms it, and loads to MySQL database
 """
 
