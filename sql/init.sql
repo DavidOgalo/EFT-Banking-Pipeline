@@ -1,6 +1,62 @@
--- MySQL Database Initialization for EFT Banking Pipeline
--- This script sets up the necessary database schema, tables, indexes, views, and stored procedures for the pipeline.
--- It includes enhancements for data quality monitoring, anomaly detection, and performance optimization.
+-- Ensure database exists and use it
+CREATE DATABASE IF NOT EXISTS eft_banking;
+USE eft_banking;
+
+-- Create bank_profiles table for dimensional data
+CREATE TABLE IF NOT EXISTS bank_profiles (
+    bank_id VARCHAR(50) PRIMARY KEY,
+    bank_name VARCHAR(200) NOT NULL,
+    bank_type ENUM('Commercial', 'Investment', 'Community', 'Online') DEFAULT 'Commercial',
+    headquarters_city VARCHAR(100),
+    headquarters_country VARCHAR(100) DEFAULT 'Kenya',
+    established_year INT,
+    total_assets DECIMAL(20,2),
+    employee_count INT,
+    branch_count INT,
+    is_active BOOLEAN DEFAULT TRUE,
+    risk_rating ENUM('Low', 'Medium', 'High') DEFAULT 'Medium',
+    regulatory_tier ENUM('Tier1', 'Tier2', 'Tier3') DEFAULT 'Tier2',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Insert sample bank profiles
+INSERT IGNORE INTO bank_profiles (bank_id, bank_name, bank_type, headquarters_city, established_year, total_assets, employee_count, branch_count, risk_rating, regulatory_tier) VALUES
+('BNK001', 'Premier Bank Kenya', 'Commercial', 'Nairobi', 1995, 125000000000.00, 2500, 120, 'Low', 'Tier1'),
+('BNK002', 'Community First Bank', 'Community', 'Mombasa', 2001, 45000000000.00, 850, 45, 'Medium', 'Tier2'),
+('BNK003', 'Metro Financial Services', 'Commercial', 'Nairobi', 1988, 98000000000.00, 1800, 95, 'Low', 'Tier1'),
+('BNK004', 'Regional Trust Bank', 'Commercial', 'Kisumu', 2005, 32000000000.00, 650, 35, 'Medium', 'Tier2'),
+('BNK005', 'Digital Banking Corp', 'Online', 'Nairobi', 2015, 78000000000.00, 400, 12, 'Medium', 'Tier2'),
+('BNK006', 'Heritage Bank Limited', 'Commercial', 'Nakuru', 1978, 25000000000.00, 420, 28, 'Low', 'Tier3'),
+('BNK007', 'Innovation Bank', 'Investment', 'Nairobi', 2010, 67000000000.00, 320, 18, 'Medium', 'Tier2');
+
+-- Create daily_bank_aggregates table
+CREATE TABLE IF NOT EXISTS daily_bank_aggregates (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    bank_id VARCHAR(50) NOT NULL,
+    transaction_date DATE NOT NULL,
+    total_volume DECIMAL(15,2) NOT NULL,
+    transaction_count INT NOT NULL,
+    avg_transaction_value DECIMAL(10,2),
+    std_transaction_value DECIMAL(10,2),
+    median_transaction_value DECIMAL(10,2),
+    min_transaction_value DECIMAL(10,2),
+    max_transaction_value DECIMAL(10,2),
+    unique_customers INT,
+    unique_transaction_ids INT,
+    transaction_type_breakdown TEXT,
+    avg_transactions_per_customer DECIMAL(8,2),
+    avg_value_per_customer DECIMAL(12,2),
+    processed_at DATETIME,
+    data_quality_score DECIMAL(5,2),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_bank_date (bank_id, transaction_date),
+    INDEX idx_transaction_date (transaction_date),
+    INDEX idx_volume (total_volume),
+    INDEX idx_created_at (created_at),
+    UNIQUE KEY unique_bank_date (bank_id, transaction_date)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Create data_quality_log table for monitoring
 CREATE TABLE IF NOT EXISTS data_quality_log (
@@ -348,9 +404,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON eft_banking.* TO 'eft_user'@'%';
 GRANT EXECUTE ON PROCEDURE eft_banking.sp_calculate_monthly_summary TO 'eft_user'@'%';
 GRANT EXECUTE ON PROCEDURE eft_banking.sp_detect_anomalies TO 'eft_user'@'%';
 
-FLUSH PRIVILEGES; database if it doesn't exist
-CREATE DATABASE IF NOT EXISTS eft_banking;
-USE eft_banking;
+FLUSH PRIVILEGES;
 
 -- Create daily_bank_aggregates table
 CREATE TABLE IF NOT EXISTS daily_bank_aggregates (
