@@ -1,0 +1,8 @@
+bank_id,bank_name,market_segment,total_lifetime_volume,avg_daily_volume,volume_volatility,total_transactions,total_customers,avg_data_quality
+BNK001,Premier Bank,Large,14951053.63,82602.51,31704.81,131975,98695,94.43
+BNK002,Community First Bank,Medium,11053684.81,61070.08,25405.2,97504,73612,94.86
+BNK003,Metro Financial,Large,13188037.17,72862.08,25580.46,119830,88468,94.99
+BNK004,Regional Trust Bank,Medium,9038809.67,49938.17,23567.2,83427,62691,95.13
+BNK005,Digital Banking Corp,Large,16472792.59,91009.9,37069.65,145630,109063,94.7
+BNK006,Heritage Bank,Small,5981957.61,33049.49,12579.67,54477,41816,94.43
+BNK007,Innovation Bank,Large,11914815.5,65827.71,26805.18,107824,81366,94.95

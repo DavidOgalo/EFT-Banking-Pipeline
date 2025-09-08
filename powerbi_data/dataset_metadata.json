@@ -1,0 +1,147 @@
+{
+  "generated_at": "2025-09-09T00:09:30.561707",
+  "datasets": {
+    "daily_transactions": {
+      "records": 1267,
+      "columns": [
+        "transaction_date",
+        "bank_id",
+        "bank_name",
+        "total_volume",
+        "transaction_count",
+        "avg_transaction_value",
+        "unique_customers",
+        "avg_value_per_customer",
+        "data_quality_score",
+        "day_of_week",
+        "day_name",
+        "month",
+        "month_name",
+        "quarter",
+        "year",
+        "week_number",
+        "is_weekend",
+        "transfer_volume",
+        "deposit_volume",
+        "withdrawal_volume",
+        "payment_volume",
+        "volatility_score",
+        "market_segment"
+      ],
+      "file_size_mb": 0.22
+    },
+    "anomaly_analysis": {
+      "records": 1267,
+      "columns": [
+        "transaction_date",
+        "bank_id",
+        "bank_name",
+        "total_volume",
+        "transaction_count",
+        "avg_transaction_value",
+        "unique_customers",
+        "avg_value_per_customer",
+        "data_quality_score",
+        "day_of_week",
+        "day_name",
+        "month",
+        "month_name",
+        "quarter",
+        "year",
+        "week_number",
+        "is_weekend",
+        "transfer_volume",
+        "deposit_volume",
+        "withdrawal_volume",
+        "payment_volume",
+        "volatility_score",
+        "market_segment",
+        "volume_7day_avg",
+        "volume_7day_std",
+        "anomaly_status",
+        "z_score"
+      ],
+      "file_size_mb": 0.26
+    },
+    "customer_analysis": {
+      "records": 1267,
+      "columns": [
+        "transaction_date",
+        "bank_id",
+        "bank_name",
+        "high_value_customers",
+        "medium_value_customers",
+        "regular_customers",
+        "high_value_volume",
+        "medium_value_volume",
+        "regular_value_volume",
+        "avg_high_value",
+        "avg_medium_value",
+        "avg_regular_value",
+        "customer_retention_rate",
+        "new_customers"
+      ],
+      "file_size_mb": 0.14
+    },
+    "bank_summary": {
+      "records": 7,
+      "columns": [
+        "bank_id",
+        "bank_name",
+        "market_segment",
+        "total_lifetime_volume",
+        "avg_daily_volume",
+        "volume_volatility",
+        "total_transactions",
+        "total_customers",
+        "avg_data_quality"
+      ],
+      "file_size_mb": 0.0
+    },
+    "monthly_trends": {
+      "records": 7,
+      "columns": [
+        "year",
+        "month",
+        "month_name",
+        "monthly_volume",
+        "monthly_transactions",
+        "monthly_customers",
+        "active_banks"
+      ],
+      "file_size_mb": 0.0
+    },
+    "weekly_patterns": {
+      "records": 7,
+      "columns": [
+        "day_name",
+        "day_of_week",
+        "is_weekend",
+        "avg_daily_volume",
+        "avg_daily_transactions",
+        "avg_daily_customers"
+      ],
+      "file_size_mb": 0.0
+    }
+  },
+  "total_records": 3822,
+  "powerbi_connection_notes": {
+    "data_source": "CSV files",
+    "refresh_frequency": "Daily",
+    "key_measures": [
+      "Total Volume",
+      "Transaction Count",
+      "Average Transaction Value",
+      "Unique Customers",
+      "Data Quality Score"
+    ],
+    "key_dimensions": [
+      "Bank ID",
+      "Transaction Date",
+      "Bank Name",
+      "Market Segment",
+      "Day of Week",
+      "Month"
+    ]
+  }
+}

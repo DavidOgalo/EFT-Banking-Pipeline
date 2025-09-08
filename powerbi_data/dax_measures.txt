@@ -1,0 +1,94 @@
+PowerBI DAX Measures for EFT Banking Dashboard
+==================================================
+
+Total Volume:
+SUM(daily_transactions[total_volume])
+
+------------------------------
+
+Average Transaction Value:
+DIVIDE(SUM(daily_transactions[total_volume]), SUM(daily_transactions[transaction_count]))
+
+------------------------------
+
+Total Customers:
+SUM(daily_transactions[unique_customers])
+
+------------------------------
+
+Volume Growth %:
+
+        VAR CurrentPeriod = SUM(daily_transactions[total_volume])
+        VAR PreviousPeriod = CALCULATE(
+            SUM(daily_transactions[total_volume]),
+            DATEADD(daily_transactions[transaction_date], -1, MONTH)
+        )
+        RETURN DIVIDE(CurrentPeriod - PreviousPeriod, PreviousPeriod)
+        
+
+------------------------------
+
+Top 5 Banks Filter:
+
+        VAR Top5Banks = TOPN(5, 
+            SUMMARIZE(daily_transactions, daily_transactions[bank_id], 
+                "TotalVolume", SUM(daily_transactions[total_volume])),
+            [TotalVolume], DESC
+        )
+        RETURN IF(daily_transactions[bank_id] IN VALUES(Top5Banks[bank_id]), 1, 0)
+        
+
+------------------------------
+
+Anomaly Detection:
+
+        VAR CurrentVolume = SUM(daily_transactions[total_volume])
+        VAR AvgVolume = CALCULATE(
+            AVERAGE(daily_transactions[total_volume]),
+            FILTER(ALL(daily_transactions), 
+                daily_transactions[bank_id] = MAX(daily_transactions[bank_id])
+            )
+        )
+        VAR StdDev = CALCULATE(
+            STDEV.P(daily_transactions[total_volume]),
+            FILTER(ALL(daily_transactions),
+                daily_transactions[bank_id] = MAX(daily_transactions[bank_id])
+            )
+        )
+        RETURN IF(ABS(CurrentVolume - AvgVolume) > 2 * StdDev, "Anomaly", "Normal")
+        
+
+------------------------------
+
+Data Quality Score:
+AVERAGE(daily_transactions[data_quality_score])
+
+------------------------------
+
+Weekend Effect:
+
+        VAR WeekendAvg = CALCULATE(
+            AVERAGE(daily_transactions[total_volume]),
+            daily_transactions[is_weekend] = TRUE()
+        )
+        VAR WeekdayAvg = CALCULATE(
+            AVERAGE(daily_transactions[total_volume]),
+            daily_transactions[is_weekend] = FALSE()
+        )
+        RETURN DIVIDE(WeekendAvg, WeekdayAvg) - 1
+        
+
+------------------------------
+
+Monthly Trend:
+
+        VAR CurrentMonth = SUM(daily_transactions[total_volume])
+        VAR LastMonth = CALCULATE(
+            SUM(daily_transactions[total_volume]),
+            DATEADD(daily_transactions[transaction_date], -1, MONTH)
+        )
+        RETURN CurrentMonth - LastMonth
+        
+
+------------------------------
+
