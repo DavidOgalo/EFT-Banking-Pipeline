@@ -1,6 +1,5 @@
-# Docker Compose configurations for Airflow with MySQL, PostgreSQL, Redis, and Adminer
 
-version: '3.8'
+# Docker Compose configurations for Airflow with MySQL, PostgreSQL, Redis, and Adminer
 
 x-airflow-common: &airflow-common
   image: apache/airflow:2.7.1
@@ -180,16 +179,6 @@ services:
     user: "0:0"
     volumes:
       - ${AIRFLOW_PROJ_DIR:-.}:/sources
-
-  # Adminer for Database Management
-  adminer:
-    image: adminer
-    ports:
-      - "8081:8080"
-    restart: always
-    depends_on:
-      - mysql
-      - postgres
 
 volumes:
   postgres-db-volume:
