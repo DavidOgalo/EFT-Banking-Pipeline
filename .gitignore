@@ -1,1 +1,4 @@
 /venv
+.env
+docs/powerbi_setup.md
+*.pyc
