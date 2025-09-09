@@ -20,13 +20,24 @@ This repository contains a comprehensive banking data pipeline solution for EFT 
 - Python 3.8+
 - PowerBI Desktop (for dashboard)
 
+**Important:**
+For Airflow to work correctly with Docker Compose, you may need to set the `AIRFLOW_UID` variable in a `.env` file in your project root. On Windows, you can set it to `50000`:
+```bash
+echo AIRFLOW_UID=50000 > .env
+```
+On Linux/macOS, use your user ID:
+```bash
+echo "AIRFLOW_UID=$(id -u)" > .env
+```
+This ensures proper file permissions for Airflow containers.
+
 ### 1. Clone and Setup
+
 ```bash
 git clone https://github.com/DavidOgalo/eft-banking-pipeline.git
 cd eft-banking-pipeline
 
-# Set environment variables
-echo "AIRFLOW_UID=$(id -u)" > .env
+# Set environment variables (see note above for AIRFLOW_UID)
 echo "_AIRFLOW_WWW_USER_USERNAME=admin" >> .env
 echo "_AIRFLOW_WWW_USER_PASSWORD=admin123" >> .env
 ```
@@ -43,6 +54,8 @@ docker-compose logs -f airflow-init
 docker-compose ps
 ```
 
+If you encounter permission errors or warnings about `AIRFLOW_UID`, ensure your `.env` file is present and correctly configured as described above.
+
 ### 3. Access Services
 - **Airflow Web UI**: http://localhost:8080 (admin/admin123)
 - **MySQL**: localhost:3306 (eft_user/eft_password)
@@ -55,6 +68,8 @@ python generate_sample_data.py
 # Or run in Docker
 docker-compose exec airflow-webserver python /opt/airflow/dags/generate_sample_data.py
 ```
+
+**Note:** If you encounter issues running the script in Docker, ensure the file path matches your container's directory structure.
 
 ### 5. Run the Pipeline
 
@@ -81,18 +96,18 @@ docker-compose exec airflow-webserver python /opt/airflow/dags/generate_sample_d
 
 ## Project Structure
 
+
 ```
 eft-banking-pipeline/
 ├── airflow_home/
-│   └──dags/
+│   └── dags/
 │       └── banking_data_pipeline.py      # Main Airflow DAG
 ├── src/
-│   ├── data_processor.py             # Data transformation module
-│   └── __init__.py
+│   └── data_processor.py                # Data transformation module
 ├── sql/
-│   ├── banking_analytics.sql         # Analytics queries
-│   └── init.sql                      # Database initialization
-├── powerbi_data/                     # Generated sample data for PowerBI
+│   ├── banking_analytics.sql            # Analytics queries
+│   └── init.sql                         # Database initialization
+├── powerbi_data/                        # Generated sample data for PowerBI
 │   ├── daily_transactions.csv
 │   ├── anomaly_analysis.csv
 │   ├── customer_analysis.csv
@@ -102,12 +117,14 @@ eft-banking-pipeline/
 │   ├── dataset_metadata.json
 │   └── dax_measures.txt
 ├── docs/
-│   ├── README.md
-│   └── System Design Diagram 
-├── generate_sample_data.py           # Sample data generator
-├── docker-compose.yml                # Infrastructure setup
-├── requirements.txt                  # Python dependencies             
-└── venv                              # Environment variables
+│   ├── README.md                        # Pipeline Setup Instructions
+│   └── EFT-Banking-Pipeline.png         # System Design Diagram
+├── powerbi_dashboard/
+│   └── Dashboard-file.pbix              # PowerBI Visualization File
+├── generate_sample_data.py              # Sample data generator script
+├── docker-compose.yml                   # Infrastructure setup
+├── requirements.txt                     # Python dependencies
+└── .env                                 # Environment variables (not committed)
 ```
 
 ## Components Detail
@@ -204,57 +221,91 @@ ORDER BY avg_transaction_value_per_customer DESC;
 
 #### Key DAX Measures:
 ```dax
+-- Total Volume
 Total Volume = SUM(daily_transactions[total_volume])
 
+-- Total Transactions
+Total Transactions = SUM(daily_transactions[transaction_count])
+
+-- Average Transaction Value
+Avg Transaction Value = 
+DIVIDE([Total Volume], [Total Transactions], 0)
+
+-- Volume Growth (Month over Month)
+Volume Growth MoM = 
+VAR CurrentMonth = [Total Volume]
+VAR PrevMonth = 
+   CALCULATE(
+      [Total Volume],
+      DATEADD('Date Table'[Date], -1, MONTH)
+   )
+RETURN 
+DIVIDE(CurrentMonth - PrevMonth, PrevMonth, 0)
+
+-- Volume Growth % (formatted)
 Volume Growth % = 
-VAR CurrentPeriod = SUM(daily_transactions[total_volume])
-VAR PreviousPeriod = CALCULATE(
-    SUM(daily_transactions[total_volume]),
-    DATEADD(daily_transactions[transaction_date], -1, MONTH)
+FORMAT([Volume Growth MoM], "0.0%")
+
+-- Top 5 Banks Filter
+Is Top 5 Bank = 
+VAR Top5 =
+   TOPN(
+      5,
+      SUMMARIZE(
+         daily_transactions,
+         daily_transactions[bank_id],
+         "TotalVolume", [Total Volume]
+      ),
+      [TotalVolume],
+      DESC
+   )
+RETURN
+IF(
+   MAX(daily_transactions[bank_id]) IN SELECTCOLUMNS(Top5, "bank_id", daily_transactions[bank_id]),
+   1,
+   0
 )
-RETURN DIVIDE(CurrentPeriod - PreviousPeriod, PreviousPeriod)
+
+-- Anomaly Detection
+Anomaly Status = 
+VAR CurrentVolume = [Total Volume]
+VAR BankAvg = 
+   CALCULATE(
+      AVERAGE(daily_transactions[total_volume]),
+      ALLEXCEPT(daily_transactions, daily_transactions[bank_id])
+   )
+VAR BankStdDev = 
+   CALCULATE(
+      STDEV.P(daily_transactions[total_volume]),
+      ALLEXCEPT(daily_transactions, daily_transactions[bank_id])
+   )
+VAR ZScore = DIVIDE(ABS(CurrentVolume - BankAvg), BankStdDev, 0)
+RETURN 
+SWITCH(
+   TRUE(),
+   ZScore > 2.5, "High Anomaly",
+   ZScore > 1.5, "Moderate Anomaly",
+   "Normal"
+)
+
+-- Data Quality Score Average
+Avg Data Quality = AVERAGE(daily_transactions[data_quality_score])
+
+-- Bank Count
+Active Banks = DISTINCTCOUNT(daily_transactions[bank_id])
+
+-- 7-Day Moving Average
+Volume 7-Day MA = 
+CALCULATE(
+   AVERAGE(daily_transactions[total_volume]),
+   DATESINPERIOD(
+      'Date Table'[Date],
+      MAX('Date Table'[Date]),
+      -7,
+      DAY
+   )
+)
 ```
-
-## Data Quality & Monitoring
-
-### Quality Checks Implemented:
-- **Completeness**: Required fields validation
-- **Accuracy**: Amount range validation (0 < amount <= 1M)
-- **Consistency**: Date format and logical validations
-- **Uniqueness**: Duplicate transaction detection
-- **Timeliness**: Future date identification
-- **Statistical**: Anomaly detection using z-scores
-
-### Monitoring Features:
-- Real-time pipeline status in Airflow
-- Data quality score per batch
-- Anomaly detection alerts
-- Processing time metrics
-- Error rate tracking
-
-## Production Deployment
-
-### For Production, Consider:
-
-1. **Security**:
-   - Use secrets management (HashiCorp Vault, AWS Secrets Manager)
-   - Implement proper authentication and authorization
-   - Network security and VPN access
-
-2. **Scalability**:
-   - Use Kubernetes for container orchestration
-   - Implement horizontal scaling for Airflow workers
-   - Use cloud-managed databases (RDS, CloudSQL)
-
-3. **Reliability**:
-   - Multi-zone deployment
-   - Automated backups and disaster recovery
-   - Enhanced monitoring and alerting
-
-4. **Data Sources**:
-   - Replace mock data with real S3/API connections
-   - Implement incremental data loading
-   - Add data lineage tracking
 
 ## Sample Data
 
@@ -276,6 +327,8 @@ pip install -r requirements.txt
 python src/data_processor.py
 ```
 
+**Note:** Ensure your virtual environment is activated if you use one (e.g., `source venv/bin/activate` on Linux/macOS or `venv\Scripts\activate` on Windows).
+
 ### Adding New Features
 1. Update the Airflow DAG in `airflow_home/dags/banking_data_pipeline.py`
 2. Modify data processing logic in `src/data_processor.py`
@@ -291,9 +344,8 @@ Expected performance for the pipeline:
 - **Anomaly Detection**: <2% false positive rate
 - **Dashboard Refresh**: <30 seconds for 6 months of data
 
-## Support
+## Troubleshooting
 
-### Troubleshooting
 1. **Airflow not starting**: Check Docker logs and ensure ports are free
 2. **Database connection issues**: Verify MySQL service is running
 3. **Pipeline failures**: Check Airflow logs for specific error messages
