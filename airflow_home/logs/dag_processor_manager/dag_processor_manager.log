@@ -1,0 +1,496 @@
+[2025-09-09T10:01:46.221+0300] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-09-09T10:01:46.226+0300] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-09-09T10:01:46.229+0300] {manager.py:471} INFO - Checking for new files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags every 300 seconds
+[2025-09-09T10:01:46.234+0300] {manager.py:738} INFO - Searching for files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags
+[2025-09-09T10:01:46.279+0300] {manager.py:741} INFO - There are 1 files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags
+[2025-09-09T10:01:46.810+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py  15648  0.40s             0           0
+================================================================================
+[2025-09-09T10:02:17.243+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  15.00s          2025-09-09T07:02:01
+================================================================================
+[2025-09-09T10:02:47.553+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  6.70s           2025-09-09T07:02:38
+================================================================================
+[2025-09-09T10:03:17.912+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.60s           2025-09-09T07:03:14
+================================================================================
+[2025-09-09T10:03:48.381+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py  15693  4.15s             1           0  5.60s           2025-09-09T07:03:14
+================================================================================
+[2025-09-09T10:04:19.047+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  10.45s          2025-09-09T07:03:54
+================================================================================
+[2025-09-09T10:04:49.537+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  7.00s           2025-09-09T07:04:32
+================================================================================
+[2025-09-09T10:05:19.989+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  6.30s           2025-09-09T07:05:09
+================================================================================
+[2025-09-09T10:05:50.233+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  6.79s           2025-09-09T07:05:46
+================================================================================
+[2025-09-09T10:06:20.767+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py  15763  4.14s             1           0  6.79s           2025-09-09T07:05:46
+================================================================================
+[2025-09-09T10:06:46.458+0300] {manager.py:738} INFO - Searching for files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags
+[2025-09-09T10:06:46.493+0300] {manager.py:741} INFO - There are 1 files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags
+[2025-09-09T10:06:50.938+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  6.82s           2025-09-09T07:06:23
+================================================================================
+[2025-09-09T10:07:21.435+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  6.15s           2025-09-09T07:06:59
+================================================================================
+[2025-09-09T10:07:51.959+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.49s           2025-09-09T07:07:36
+================================================================================
+[2025-09-09T10:08:22.438+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  6.09s           2025-09-09T07:08:12
+================================================================================
+[2025-09-09T10:08:53.076+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  6.17s           2025-09-09T07:08:49
+================================================================================
+[2025-09-09T10:09:23.412+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py  16216  4.04s             1           0  6.17s           2025-09-09T07:08:49
+================================================================================
+[2025-09-09T10:09:53.856+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  7.43s           2025-09-09T07:09:26
+================================================================================
+[2025-09-09T10:10:04.866+0300] {manager.py:451} INFO - Exiting gracefully upon receiving signal 15
+[2025-09-09T10:14:34.584+0300] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-09-09T10:14:34.590+0300] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-09-09T10:14:34.594+0300] {manager.py:471} INFO - Checking for new files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags every 300 seconds
+[2025-09-09T10:14:34.598+0300] {manager.py:738} INFO - Searching for files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags
+[2025-09-09T10:14:34.650+0300] {manager.py:741} INFO - There are 1 files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags
+[2025-09-09T10:14:34.951+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py  16485  0.17s             0           0
+================================================================================
+[2025-09-09T10:15:05.081+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  9.91s           2025-09-09T07:14:44
+================================================================================
+[2025-09-09T10:15:35.579+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  7.11s           2025-09-09T07:15:22
+================================================================================
+[2025-09-09T10:16:06.075+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  6.27s           2025-09-09T07:15:59
+================================================================================
+[2025-09-09T10:16:36.820+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  6.36s           2025-09-09T07:16:35
+================================================================================
+[2025-09-09T10:17:07.295+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py  16550  1.01s             1           0  6.36s           2025-09-09T07:16:35
+================================================================================
+[2025-09-09T10:17:37.771+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  6.56s           2025-09-09T07:17:12
+================================================================================
+[2025-09-09T10:18:08.372+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.61s           2025-09-09T07:17:49
+================================================================================
+[2025-09-09T10:18:39.076+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  9.44s           2025-09-09T07:18:28
+================================================================================
+[2025-09-09T10:19:09.533+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.60s           2025-09-09T07:19:05
+================================================================================
+[2025-09-09T10:19:34.959+0300] {manager.py:738} INFO - Searching for files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags
+[2025-09-09T10:19:34.997+0300] {manager.py:741} INFO - There are 1 files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags
+[2025-09-09T10:19:40.126+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py  16616  5.08s             1           0  5.60s           2025-09-09T07:19:05
+================================================================================
+[2025-09-09T10:20:10.678+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  10.09s          2025-09-09T07:19:45
+================================================================================
+[2025-09-09T10:20:41.154+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.78s           2025-09-09T07:20:21
+================================================================================
+[2025-09-09T10:21:11.641+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.47s           2025-09-09T07:20:56
+================================================================================
+[2025-09-09T10:21:42.370+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.61s           2025-09-09T07:21:32
+================================================================================
+[2025-09-09T10:22:12.702+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.79s           2025-09-09T07:22:08
+================================================================================
+[2025-09-09T10:22:42.823+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py  16693  4.03s             1           0  5.79s           2025-09-09T07:22:08
+================================================================================
+[2025-09-09T10:23:13.343+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.01s           2025-09-09T07:22:43
+================================================================================
+[2025-09-09T10:23:44.073+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  6.43s           2025-09-09T07:23:20
+================================================================================
+[2025-09-09T10:24:14.744+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.85s           2025-09-09T07:23:57
+================================================================================
+[2025-09-09T10:24:35.376+0300] {manager.py:738} INFO - Searching for files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags
+[2025-09-09T10:24:35.416+0300] {manager.py:741} INFO - There are 1 files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags
+[2025-09-09T10:24:44.928+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.94s           2025-09-09T07:24:33
+================================================================================
+[2025-09-09T10:25:15.099+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.19s           2025-09-09T07:25:09
+================================================================================
+[2025-09-09T10:25:45.779+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.32s           2025-09-09T07:25:44
+================================================================================
+[2025-09-09T10:26:16.332+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py  16775  1.02s             1           0  5.32s           2025-09-09T07:25:44
+================================================================================
+[2025-09-09T10:26:46.964+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.67s           2025-09-09T07:26:20
+================================================================================
+[2025-09-09T10:27:17.346+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.59s           2025-09-09T07:26:56
+================================================================================
+[2025-09-09T10:27:47.761+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  9.52s           2025-09-09T07:27:36
+================================================================================
+[2025-09-09T10:28:18.059+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  6.28s           2025-09-09T07:28:12
+================================================================================
+[2025-09-09T10:28:48.311+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py  16828  5.03s             1           0  6.28s           2025-09-09T07:28:12
+================================================================================
+[2025-09-09T10:29:18.834+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py  16840  0.00s             1           0  5.13s           2025-09-09T07:28:48
+================================================================================
+[2025-09-09T10:29:36.091+0300] {manager.py:738} INFO - Searching for files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags
+[2025-09-09T10:29:36.144+0300] {manager.py:741} INFO - There are 1 files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags
+[2025-09-09T10:29:49.402+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  4.92s           2025-09-09T07:29:23
+================================================================================
+[2025-09-09T10:30:19.869+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.35s           2025-09-09T07:29:59
+================================================================================
+[2025-09-09T10:30:50.717+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.41s           2025-09-09T07:30:35
+================================================================================
+[2025-09-09T10:31:21.382+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.05s           2025-09-09T07:31:11
+================================================================================
+[2025-09-09T10:31:51.920+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  6.36s           2025-09-09T07:31:48
+================================================================================
+[2025-09-09T10:32:22.326+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py  16906  4.03s             1           0  6.36s           2025-09-09T07:31:48
+================================================================================
+[2025-09-09T10:32:53.215+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  7.65s           2025-09-09T07:32:25
+================================================================================
+[2025-09-09T10:33:23.376+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.75s           2025-09-09T07:33:02
+================================================================================
+[2025-09-09T10:33:53.760+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  5.20s           2025-09-09T07:33:37
+================================================================================
+[2025-09-09T10:34:24.404+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  6.22s           2025-09-09T07:34:14
+================================================================================
+[2025-09-09T10:34:36.631+0300] {manager.py:738} INFO - Searching for files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags
+[2025-09-09T10:34:36.701+0300] {manager.py:741} INFO - There are 1 files in /mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags
+[2025-09-09T10:34:54.965+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py                           1           0  8.39s           2025-09-09T07:34:53
+================================================================================
+[2025-09-09T10:35:25.467+0300] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/mnt/c/Users/Ogalo/Projects/EFT-Banking-Pipeline/airflow_home/dags/banking_data_pipeline.py  16970  2.02s             1           0  8.39s           2025-09-09T07:34:53
+================================================================================
+[2025-09-09T10:35:44.935+0300] {manager.py:451} INFO - Exiting gracefully upon receiving signal 15
+[2025-09-09T10:35:57.521+0300] {manager.py:451} INFO - Exiting gracefully upon receiving signal 15
+[2025-09-09T10:36:08.442+0300] {manager.py:451} INFO - Exiting gracefully upon receiving signal 15
